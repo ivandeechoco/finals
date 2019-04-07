@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  web:
+    image: phpimage
+    container_name: php
+    links:
+      - "db:test_default"
+    depends_on:
+      - db
+    volumes:
+      - ./var/www/html/
+    ports:
+       - "8000:80"
+    stdin_open: true
+    tty: true
+
+
+
+
+  db:
+    image: dbimage
+    container_name: db
+## restart:
+##    environment:
+##      MYSQL_ROOT_USER: root
+##      MYSQL_ROOT_PASSWORD:
+##      MYSQL_DATABASE: cldadmi_midterms
+##      MYSQL_USER: root
+##     MYSQL_PASSWORD:
+##    volumes:
+##      - ./var/lib/mysql
+    ports:
+      - "3306:3306"
