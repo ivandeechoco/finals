@@ -5,7 +5,7 @@ services:
     image: ivandeechoco/phpimage
     container_name: php
     links:
-      - "db:test_default"
+      - "db:finals_default"
     depends_on:
       - db
     volumes:
@@ -21,14 +21,5 @@ services:
   db:
     image: ivandeechoco/dbimage
     container_name: db
-## restart:
-##    environment:
-##      MYSQL_ROOT_USER: root
-##      MYSQL_ROOT_PASSWORD:
-##      MYSQL_DATABASE: cldadmi_midterms
-##      MYSQL_USER: root
-##     MYSQL_PASSWORD:
-##    volumes:
-##      - ./var/lib/mysql
     ports:
       - "3306:3306"
