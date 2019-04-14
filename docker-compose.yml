@@ -23,3 +23,5 @@ services:
     container_name: db
     ports:
       - "3306:3306"
+    environment:
+      - TZ=Asia/Hong_Kong
