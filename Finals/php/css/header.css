@@ -1,0 +1,21 @@
+.header {
+    padding: 20px;
+    text-align: center;
+    background-image: url(https://online.apc.edu.ph/flavio/inquiry/images/jen.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-size: 30px;
+
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.logo {
+    height: 110px;
+    width: 110px;
+    display: block;
+    margin: auto;
+}
