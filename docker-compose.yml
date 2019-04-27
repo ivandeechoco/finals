@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    image: ivandeechoco/phpimage
+    container_name: php
+    links:
+      - "db:finals_default"
+    depends_on:
+      - db
+    volumes:
+      - ./var/www/html/
+    ports:
+       - "8000:80"
+    stdin_open: true
+    tty: true
+
+
+
+
+  db:
+    image: ivandeechoco/dbimage
+    container_name: db
+    ports:
+      - "3306:3306"
+    environment:
+      - TZ=Asia/Hong_Kong
